@@ -59,8 +59,8 @@ def train_model():
     # Visualize architecture
     sample_input = torch.randn(1, 1, 28, 28).to(device)
     output = model(sample_input)
-    dot = make_dot(output, params=dict(model.named_parameters()))
-    dot.render(os.path.join(viz_dir, "architecture"), format="png", cleanup=True)
+    # dot = make_dot(output, params=dict(model.named_parameters()))
+    # dot.render(os.path.join(viz_dir, "architecture"), format="png", cleanup=True)
     
     # Dataset and loader
     transform = transforms.Compose([transforms.ToTensor()])
