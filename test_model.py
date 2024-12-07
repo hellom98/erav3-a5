@@ -42,8 +42,7 @@ def run_model_tests():
         assert torch.all(torch.isfinite(output)), f"model Outputs contain NaN or Inf values"
 
     def test_model_accuracy():
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        model = SimpleCNN().to(device)
+        model = SimpleCNN()
         
         model_path = get_latest_model()
         assert model_path is not None, f"No model weights found for model"
@@ -61,7 +60,7 @@ def run_model_tests():
         
         with torch.no_grad():
             for data, target in test_loader:
-                data, target = data.to(device), target.to(device)
+                data, target = data, target
                 outputs = model(data)
                 _, predicted = torch.max(outputs.data, 1)
                 total += target.size(0)
