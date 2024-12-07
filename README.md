@@ -1,5 +1,5 @@
 # MNIST Classification with CI/CD Pipeline
-[![Build Status](https://github.com/username/repo/actions/workflows/ml-pipeline.yml/badge.svg)](https://github.com/username/repo/actions/workflows/ml-pipeline.yml)
+[![Build Status](https://github.com/hellom98/erav3-a5/actions/workflows/ml-pipeline.yml/badge.svg)](https://github.com/hellom98/erav3-a5/actions/workflows/ml-pipeline.yml)
 
 This project implements a lightweight CNN for MNIST digit classification with a complete CI/CD pipeline using GitHub Actions. The focus is on parameter efficiency and reproducibility.
 
