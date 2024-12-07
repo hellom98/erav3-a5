@@ -46,7 +46,7 @@ def run_model_tests():
         
         model_path = get_latest_model()
         assert model_path is not None, f"No model weights found for model"
-        model.load_state_dict(torch.load(model_path))
+        model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
         
         transform = transforms.Compose([transforms.ToTensor()])
         test_dataset = datasets.MNIST('data', train=False, download=True, transform=transform)
